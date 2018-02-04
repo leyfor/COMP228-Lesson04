@@ -3,18 +3,36 @@ import java.util.Scanner;
 public class Program {
 
 	public static void main(String[] args) {
-		Scanner input = new Scanner(System.in); // create input scanner
-		int myAge;
 		
-		try {
+		Person person = new Person();
+		
+		//int myAge;
+		//boolean isValid = false;
+		
+		while (!person.getIsValid()) {
 			
-			System.out.println("Please enter your age: ");
-			myAge = input.nextInt();
-			System.out.println("\nYou entered: " + myAge);
 			
-		} catch (Exception e) {
-			System.out.println("Please enter a valid number.");
+				Scanner input = new Scanner(System.in); // create input scanner
+				
+				System.out.println("Please enter your age: ");
+				person.setAge(input.nextLine());
+				
+				if(person.getIsValid()) {
+					System.out.println(person.toString());
+				} else {
+					System.out.println();
+				}
+			
+			
+				
+				
+				
+				
+			
+			
 		}
+		
+		
 
 	}
 
